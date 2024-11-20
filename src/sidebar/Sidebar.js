@@ -8,7 +8,7 @@ export default function Sidebar({handleChange}) {
     <section className='sidebar'>
         <div className='sidebar-logo'>
             <h1>
-                <TiShoppingCart />
+                <TiShoppingCart style={{fontSize:'3.8rem'}}/>
             </h1>
         </div>
 
