@@ -16,10 +16,10 @@ function App() {
   //.........Input filter..............
   const [query, setQuery] = useState('');
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     setQuery(event.target.value)
   }
-  const filteredData = data.filter(data => data.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1));
+  const filteredData = data.filter((x) => x.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !== -1);
 
   //----------Radio filter...............
   const handleChange = (event) => {
@@ -65,9 +65,9 @@ function App() {
   return (
     < >
       <Sidebar handleChange={handleChange} />
-      <Nav />
-      <Recmd />
-      <Product />
+      <Nav query={query} handleInputChange={handleInputChange} />
+      <Recmd  handleClick={handleClick}/>
+      <Product result={result}/>
     </>
   );
 }

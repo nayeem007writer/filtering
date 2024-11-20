@@ -1,14 +1,14 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 import { IoBagAddSharp } from "react-icons/io5"
-export default function Card() {
+export default function Card({img, title, star, reviews, prevPrice, newPrice, company,color, category}) {
   return (
     <div>
                   <section className='card'>
-                <img className='card-image' src='https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg' alt='loading...'></img>
+                <img className='card-image' src={img} alt='loading...'></img>
                 <div className='card-details'>
                     <h3 className='card-title'>
-                        nike
+                        {title}
                     </h3>
                     <section className='card-reviews'>
                     <FaStar className='rating-star' />
@@ -16,12 +16,12 @@ export default function Card() {
                     <FaStar className='rating-star'/>
                     <FaStar className='rating-star'/>
                     <FaStar className='rating-star'/>
-                    <span className='total-reviews'>4</span>
+                    <span className='total-reviews'>{reviews}</span>
                     </section>
 
                     <section className='card-price'>
                         <div className='price'>
-                            <del>$800</del>$200
+                            <del>{prevPrice}</del>{newPrice}
                         </div>
                         <div className='bag'>
                         <IoBagAddSharp className='bag-icon'/>

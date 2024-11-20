@@ -1,15 +1,17 @@
+import Button from '../components/Button'
 import './Recmd.css'
 
-export default function Recmd() {
+export default function Recmd({handleClick}) {
   return (
     <>
         <div>
             <h2 className='recommended-title'>Recommended</h2>
             <div className='recommended-flex'>
-                <button className='btns'>NIKE</button>
-                <button className='btns'>PUMA</button>
-                <button className='btns'>AIR JORDAN</button>
-                <button className='btns'>ADDIDAS</button>
+                <Button onClickHandler={handleClick} value="" title="All Products"/>
+                <Button onClickHandler={handleClick} value="Nike" title="Nike"/>
+                <Button onClickHandler={handleClick} value="Puma" title="Puma"/>
+                <Button onClickHandler={handleClick} value="Vans" title="Vans"/>
+                <Button onClickHandler={handleClick} value="Adidas" title="Adidas"/>
             </div>
         </div>
     </>
