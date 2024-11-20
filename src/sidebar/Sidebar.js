@@ -3,7 +3,7 @@ import Color from './color/Color'
 import Price from './price/Price'
 import './Sidebar.css'
 import { TiShoppingCart } from "react-icons/ti"
-export default function Sidebar() {
+export default function Sidebar({handleChange}) {
   return (
     <section className='sidebar'>
         <div className='sidebar-logo'>
@@ -12,9 +12,9 @@ export default function Sidebar() {
             </h1>
         </div>
 
-        <Category />
-        <Price/>
-        <Color/>
+        <Category handleChange={handleChange} />
+        <Price handleChange={handleChange}/>
+        <Color handleChange={handleChange}/>
 
     </section>
   )
